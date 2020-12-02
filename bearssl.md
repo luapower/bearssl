@@ -1,5 +1,5 @@
 
-BearSSL, linked by [libtls_bearssl] which is used by [socket2] for TLS.
+BearSSL, linked by [libtls_bearssl] which is used by [sock] for TLS.
 
 ## Limitations
 
