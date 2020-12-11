@@ -1,4 +1,6 @@
 local ffi = require'ffi'
+require'bearssl_hash_h'
+require'bearssl_block_h'
 ffi.cdef[[
 typedef struct br_prng_class_ br_prng_class;
 struct br_prng_class_ {

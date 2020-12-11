@@ -1,4 +1,6 @@
 local ffi = require'ffi'
+require'bearssl_rsa_h'
+require'bearssl_ec_h'
 ffi.cdef[[
 enum {
 	BR_ERR_X509_OK       = 32,
@@ -318,9 +320,4 @@ size_t br_encode_ec_raw_der(void *dest,
  const br_ec_private_key *sk, const br_ec_public_key *pk);
 size_t br_encode_ec_pkcs8_der(void *dest,
  const br_ec_private_key *sk, const br_ec_public_key *pk);
-enum {
-	BR_ENCODE_PEM_RSA_RAW = "RSA PRIVATE KEY",
-	BR_ENCODE_PEM_EC_RAW = "EC PRIVATE KEY",
-	BR_ENCODE_PEM_PKCS8  = "PRIVATE KEY",
-};
 ]]
